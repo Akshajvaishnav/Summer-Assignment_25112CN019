@@ -1,19 +1,13 @@
 #include <stdio.h>
-
 int main() {
     int n1, n2, temp;
-
     printf("Enter two positive integers: ");
     scanf("%d %d", &n1, &n2);
-
-    // Euclidean Algorithm: Keep replacing n1 with n2 and n2 with the remainder
     while (n2 != 0) {
         temp = n2;
         n2 = n1 % n2;
         n1 = temp;
     }
-
     printf("GCD is %d\n", n1);
-
     return 0;
 }
