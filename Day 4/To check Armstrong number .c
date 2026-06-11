@@ -10,7 +10,7 @@ int main() {
 
     originalNum = num;
 
-    // 1. Count the total number of digits
+   
     while (originalNum != 0) {
         originalNum /= 10;
         digits++;
@@ -18,15 +18,14 @@ int main() {
 
     originalNum = num;
 
-    // 2. Calculate the sum of digits raised to the power of total digits
+   
     while (originalNum != 0) {
         remainder = originalNum % 10;
         result += pow(remainder, digits);
         originalNum /= 10;
     }
 
-    // 3. Check if the sum matches the original number
-    // Rounding is used to prevent precision errors from the pow() function
+
     if ((int)(result + 0.5) == num) {
         printf("%d is an Armstrong number.\n", num);
     } else {
