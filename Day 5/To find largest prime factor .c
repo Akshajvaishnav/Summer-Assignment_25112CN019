@@ -1,16 +1,16 @@
 #include <stdio.h>
 
-// Function to find the largest prime factor
+
 long long get_largest_prime_factor(long long n) {
     long long max_prime = -1;
 
-    // 1. Remove all even factors (divisible by 2)
+    
     while (n % 2 == 0) {
         max_prime = 2;
         n /= 2;
     }
 
-    // 2. Look for odd factors starting from 3 up to sqrt(n)
+    
     for (long long i = 3; i * i <= n; i += 2) {
         while (n % i == 0) {
             max_prime = i;
@@ -18,7 +18,7 @@ long long get_largest_prime_factor(long long n) {
         }
     }
 
-    // 3. If n is still greater than 2, the remaining n must be prime
+ 
     if (n > 2) {
         max_prime = n;
     }
